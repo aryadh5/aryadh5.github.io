@@ -1,200 +1,281 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Handlee', serif;
+  font-family: "Plus Jakarta Sans", sans-serif; /* Thin variant */
+  font-weight: 200;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .navbar {
-    position: fixed !important;
-    left: 0;
-    top: 0;
-    right: 0;
-    z-index: 9999;
-    font-size: 18px;
-    background-color: #8f7f66;
-    font-weight: 700;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  font-size: 18px;
+  background-color: #8f7f66;
+  font-weight: 700;
 }
 
 .navbar-nav li a {
-    color: white;
-    transition: all 1s;
+  color: white;
+  transition: all 1s;
 }
 
 .navbar-nav li a:hover {
-    color: #f4623a;
+  color: #f4623a;
 }
 
 .navbar .navbar-brand {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* -------------------home---------------- */
 .home {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../images/bg-masthead.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/bg-masthead.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /* Keeps the original text color */
+  margin: 10px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.box:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Change to your desired hover effect */
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+a.box {
+  text-decoration: none;
+  color: inherit; /* Keeps the text color same as the parent element */
 }
 
 .home-container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; /* Adjust to fit your design */
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping to the next line if needed */
+  padding: 20px;
+  position: relative;
 }
 
-.home-container .layer {
-    background-color: rgba(110, 84, 61, 0.6);
-}
+/* .home-container .layer {
+  background-color: rgba(110, 84, 61, 0.6);
+} */
 
 .home-container .layer .home-text h1 {
-    font-size: 50px;
-    position: relative;
-    padding-bottom: 25px;
+  font-size: 50px;
+  position: relative;
+  padding-bottom: 25px;
 }
 
 .home-container .layer .home-text h1::after {
-    content: "";
-    position: absolute;
-    background-color: #f4623a;
-    height: 3px;
-    width: 10%;
-    bottom: 0;
-    left: calc(50% - 20px);
+  content: "";
+  position: absolute;
+  background-color: #f4623a;
+  height: 3px;
+  width: 10%;
+  bottom: 0;
+  left: calc(50% - 20px);
 }
 
 .home-container .layer .home-text p {
-    color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .home-container .layer .home-text button {
-    background-color: #f4623a;
-    border: none;
-    transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
+  background-color: #f4623a;
+  border: none;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
 .home-container .layer .home-text button a {
-    color: white;
+  color: white;
 }
 
 .home-container .layer .home-text button:hover {
-    background-color: #ac2d09;
+  background-color: #ac2d09;
 }
 
 /* ------------------about---------------- */
+.about-paragraph {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300; /* Adjust font weight as needed */
+}
+
 .about-section {
-    background-color: #f4623a;
-    color: white;
+  background-color: #c5354d;
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  color: #f0f0f0;
+  padding: 50px 0;
 }
 
-.about-section .container h2 {
-    font-size: 40px;
-    position: relative;
-    padding-bottom: 25px;
+.about-text h2 {
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 25px;
 }
 
-.about-section .container h2::after {
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    height: 3px;
-    width: 10%;
-    bottom: 0;
-    right: 45%;
+.about-text h2::after {
+  content: "";
+  position: absolute;
+  background-color: #f0f0f0;
+  height: 3px;
+  width: 10%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.about-section .container p {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.about-section .container button {
-    background-color: white;
-    border: none;
-    transition: all .5s;
-}
-
-.about-section .container button a {
-    color: rgb(20, 20, 20);
-    text-align: center;
-}
-
-.about-section .container button:hover {
-    background-color: rgba(255, 255, 255, 0.75);
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* -------------------Service------------ */
 .title h2 {
-    position: relative;
+  position: relative;
 }
 
 .title h2::after {
-    content: "";
-    position: absolute;
-    background-color: #f4623a;
-    height: 3px;
-    width: 10%;
-    bottom: 0;
-    right: 45%;
-
+  content: "";
+  position: absolute;
+  background-color: #f4623a;
+  height: 3px;
+  width: 10%;
+  bottom: 0;
+  right: 45%;
 }
 
 .Service-section .content i {
-    color: #f4623a;
-    font-size: 40px;
-    padding: 10px 0px;
+  color: #f4623a;
+  font-size: 40px;
+  padding: 10px 0px;
 }
 
 .Service-section .content p {
-    color: rgb(121, 119, 119);
+  color: rgb(121, 119, 119);
 }
 
 /* ---------------portfolio--------------- */
 .portfolio .item-layer {
-    background-color: #f4623a80;
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
+  background-color: #f4623a80;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
 }
 
 .portfolio .item:hover .item-layer {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* --------------contact------------- */
 .contact .btn-submit {
-    background-color: #f4623a;
-    color: white;
-    font-weight: bold;
-    transition: all .4s;
+  background-color: #f4623a;
+  color: white;
+  font-weight: bold;
+  transition: all 0.4s;
 }
 
 .contact .btn-submit:hover {
-    background-color: #ac2d09;
+  background-color: #ac2d09;
 }
 
 @media (max-width: 576px) {
-    .portfolio .item-layer {
-        background-color: #f4623a4d;
-        opacity: 1;
-    }
+  .portfolio .item-layer {
+    background-color: #f4623a4d;
+    opacity: 1;
+  }
 
-    .contact .contact-form {
-        width: 90% !important;
-    }
+  .contact .contact-form {
+    width: 90% !important;
+  }
+}
+
+/* New header styles */
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_img img {
+  width: 100px; /* Adjust the width to your desired size */
+  height: 100px; /* The height should be the same as the width to make it a square */
+  border-radius: 50%; /* This will make the image a circle */
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.header_text {
+  text-align: center;
+}
+
+.header_h_item {
+  margin: 0;
+}
+
+.header_svg_list {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the space between icons */
+}
+
+.header_svg_item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header_nav_menu_list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header_nav_menu_item {
+  margin: 0 15px; /* Adjust the spacing between menu items */
+  cursor: pointer;
 }

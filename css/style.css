@@ -279,3 +279,85 @@ a.box {
   margin: 0 15px; /* Adjust the spacing between menu items */
   cursor: pointer;
 }
+
+/* General styling */
+.skills-section {
+  padding: 3em 0;
+  background: #f5f5dc; /* Beige background */
+  color: #8b4513; /* Brown text color */
+}
+
+h6.service-category-title {
+  font-size: 1.5em;
+  margin: 1em 0; /* Shortened margin shorthand */
+}
+
+.skill-bar {
+  margin-bottom: 1em;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.skill-bar-title {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  transition: color 0.3s, font-weight 0.3s; /* Smooth transition for text color and font-weight change */
+}
+
+.skill-bar-progress {
+  height: 10px;
+  background-color: #ff6811; /* Orange progress bar */
+  position: relative;
+  color: #8b4513; /* Text color inside the bar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.skill-bar-progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #ffbd39; /* Lighter orange */
+}
+
+/* Hover effect for skill bars */
+.skill-bar:hover {
+  background-color: rgba(
+    245,
+    245,
+    220,
+    0.703
+  ); /* Light beige background on hover */
+  color: #8b4513; /* Brown text color on hover */
+}
+
+.skill-bar:hover .skill-bar-title {
+  color: #8b4513; /* Brown text color on hover */
+  font-weight: bold; /* Bold font on hover */
+}
+
+.skill-bar:hover .skill-bar-progress {
+  background-color: #ae480d; /* Darker orange progress bar on hover */
+  color: white; /* White text color for progress bar on hover */
+  font-weight: bolder; /* Bold font on hover */
+}
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #d6d6d78f; /* Dark brown background for tooltip */
+  color: black; /* White text color for tooltip */
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.skill-bar:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

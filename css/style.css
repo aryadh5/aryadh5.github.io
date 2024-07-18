@@ -140,15 +140,15 @@ a.box {
 .about-paragraph {
   margin-bottom: 20px;
   font-size: 18px;
-  font-weight: 300; /* Adjust font weight as needed */
+  font-weight: 400; /* Adjust font weight as needed */
 }
 
 .about-section {
-  background-color: #c5354d;
+  background-color: beige;
   background-repeat: no-repeat; /* Prevent background image from repeating */
   background-size: cover; /* Cover the entire background */
   background-position: center; /* Center the background image */
-  color: #f0f0f0;
+  color: #666;
   padding: 50px 0;
 }
 
@@ -161,7 +161,7 @@ a.box {
 .about-text h2::after {
   content: "";
   position: absolute;
-  background-color: #f0f0f0;
+  background-color: #ea0c0c;
   height: 3px;
   width: 10%;
   bottom: 0;
@@ -360,4 +360,113 @@ h6.service-category-title {
 .skill-bar:hover .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+/* Resume Section Styles */
+.resume-section {
+  padding: 60px 0;
+  background-color: #d2dfc6;
+}
+
+.resume-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.resume-section #navi {
+  position: static;
+  top: 100px;
+  padding-right: 15px;
+}
+
+.resume-section #navi ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resume-section #navi ul li {
+  margin-bottom: 10px;
+}
+
+.resume-section #navi ul li a {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resume-section #navi ul li a:hover {
+  color: #f4623a;
+}
+
+.resume-section .heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+}
+
+.resume-section .heading::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #f4623a;
+  bottom: -10px;
+  left: 0;
+}
+
+.resume-section .resume-wrap {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.resume-section .resume-wrap:hover {
+  transform: translateY(-5px);
+}
+
+.resume-section .resume-wrap .icon {
+  font-size: 30px;
+  color: #f4623a;
+  margin-right: 15px;
+}
+
+.resume-section .resume-wrap .text {
+  flex: 1;
+}
+
+.resume-section .resume-wrap .date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.resume-section .resume-wrap h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.resume-section .resume-wrap .position {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f4623a;
+  margin-bottom: 10px;
+}
+
+.resume-section .resume-wrap ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.resume-section .resume-wrap ul li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
 }
